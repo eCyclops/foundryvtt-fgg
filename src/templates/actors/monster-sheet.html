@@ -7,15 +7,15 @@
   {{! Sheet Tab Navigation }}
   <nav class="sheet-tabs tabs flexrow" data-group="primary">
     <a class="item" data-tab="attributes">
-      {{localize "OSE.category.attributes"}}
+      {{localize "FGG.category.attributes"}}
     </a>
     {{#if data.spells.enabled}}
     <a class="item" data-tab="spells">
-      {{localize "OSE.category.spells"}}
+      {{localize "FGG.category.spells"}}
     </a>
     {{/if}}
     <a class="item" data-tab="notes">
-      {{localize "OSE.category.notes"}}
+      {{localize "FGG.category.notes"}}
     </a>
   </nav>
   {{! Sheet Body }}
@@ -31,7 +31,7 @@
     {{/if}}
     <div class="tab" data-group="primary" data-tab="notes">
       <div class="inventory">
-        <div class="item-titles">{{localize "OSE.category.notes"}}</div>
+        <div class="item-titles">{{localize "FGG.category.notes"}}</div>
         <div class="resizable-editor" data-editor-size="320">
           {{editor content=data.details.biography target="data.details.biography"
           button=true owner=owner editable=editable}}
