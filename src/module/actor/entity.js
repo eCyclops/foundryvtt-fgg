@@ -17,7 +17,7 @@ export class OseActor extends Actor {
     this.computeTreasure();
 
     // Determine Initiative
-    if (game.settings.get("ose", "initiative") != "group") {
+    if (game.settings.get("fgg", "initiative") != "group") {
       data.initiative.value = data.initiative.mod;
       if (this.data.type == "character") {
         data.initiative.value += data.scores.dex.mod;
@@ -575,7 +575,7 @@ export class OseActor extends Actor {
           data.movement.base = 60;
           break;
       }
-      if (weight > game.settings.get("ose", "significantTreasure")) {
+      if (weight > game.settings.get("fgg", "significantTreasure")) {
         data.movement.base -= 30;
       }
     }
