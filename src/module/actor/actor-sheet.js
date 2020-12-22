@@ -12,8 +12,8 @@ export class OseActorSheet extends ActorSheet {
 
     data.config = CONFIG.OSE;
     // Settings
-    data.config.ascendingAC = game.settings.get("ose", "ascendingAC");
-    data.config.encumbrance = game.settings.get("ose", "encumbranceOption");
+    data.config.ascendingAC = game.settings.get("fgg", "ascendingAC");
+    data.config.encumbrance = game.settings.get("fgg", "encumbranceOption");
 
     // Prepare owned items
     this._prepareItems(data);
