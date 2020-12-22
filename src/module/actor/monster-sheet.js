@@ -17,7 +17,7 @@ export class OseActorSheetMonster extends OseActorSheet {
    */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["ose", "sheet", "monster", "actor"],
+      classes: ["fgg", "sheet", "monster", "actor"],
       template: "systems/ose/templates/actors/monster-sheet.html",
       width: 450,
       height: 560,
@@ -40,7 +40,7 @@ export class OseActorSheetMonster extends OseActorSheet {
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
-        "/systems/ose/templates/actors/dialogs/monster-saves.html",
+        "/systems/fgg/templates/actors/dialogs/monster-saves.html",
         templateData
       );
     //Create Dialog window
@@ -75,7 +75,7 @@ export class OseActorSheetMonster extends OseActorSheet {
     const data = super.getData();
 
     // Settings
-    data.config.morale = game.settings.get("ose", "morale");
+    data.config.morale = game.settings.get("fgg", "morale");
     data.data.details.treasure.link = TextEditor.enrichHTML(data.data.details.treasure.table);
     data.isNew = this.actor.isNew();
     return data;
@@ -107,7 +107,7 @@ export class OseActorSheetMonster extends OseActorSheet {
   async _chooseItemType(choices = ["weapon", "armor", "shield", "gear"]) {
     let templateData = { types: choices },
       dlg = await renderTemplate(
-        "systems/ose/templates/items/entity-create.html",
+        "systems/fgg/templates/items/entity-create.html",
         templateData
       );
     //Create Dialog window
