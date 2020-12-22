@@ -19,8 +19,8 @@ export class OseActorSheetCharacter extends OseActorSheet {
    */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["ose", "sheet", "actor", "character"],
-      template: "systems/ose/templates/actors/character-sheet.html",
+      classes: ["fgg", "sheet", "actor", "character"],
+      template: "systems/fgg/templates/actors/character-sheet.html",
       width: 450,
       height: 530,
       resizable: true,
@@ -48,9 +48,9 @@ export class OseActorSheetCharacter extends OseActorSheet {
   getData() {
     const data = super.getData();
 
-    data.config.ascendingAC = game.settings.get("ose", "ascendingAC");
-    data.config.initiative = game.settings.get("ose", "initiative") != "group";
-    data.config.encumbrance = game.settings.get("ose", "encumbranceOption");
+    data.config.ascendingAC = game.settings.get("fgg", "ascendingAC");
+    data.config.initiative = game.settings.get("fgg", "initiative") != "group";
+    data.config.encumbrance = game.settings.get("fgg", "encumbranceOption");
 
     data.isNew = this.actor.isNew();
     return data;
@@ -62,7 +62,7 @@ export class OseActorSheetCharacter extends OseActorSheet {
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
-        "/systems/ose/templates/actors/dialogs/lang-create.html",
+        "/systems/fgg/templates/actors/dialogs/lang-create.html",
         templateData
       );
     //Create Dialog window
