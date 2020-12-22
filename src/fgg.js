@@ -45,16 +45,16 @@ Hooks.once("init", async function () {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("ose", OseActorSheetCharacter, {
+  Actors.registerSheet("fgg", OseActorSheetCharacter, {
     types: ["character"],
     makeDefault: true,
   });
-  Actors.registerSheet("ose", OseActorSheetMonster, {
+  Actors.registerSheet("fgg", OseActorSheetMonster, {
     types: ["monster"],
     makeDefault: true,
   });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("ose", OseItemSheet, { makeDefault: true });
+  Items.registerSheet("fgg", OseItemSheet, { makeDefault: true });
 
   await preloadHandlebarsTemplates();
 });
@@ -91,14 +91,14 @@ Hooks.on("renderSidebarTab", async (object, html) => {
     ose.append(` <sub><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php">SRD<a></sub>`);
 
     // License text
-    const template = "systems/ose/templates/chat/license.html";
+    const template = "systems/fgg/templates/chat/license.html";
     const rendered = await renderTemplate(template);
     gamesystem.find(".system").append(rendered);
     
     // User guide
     let docs = html.find("button[data-action='docs']");
     const styling = "border:none;margin-right:2px;vertical-align:middle;margin-bottom:5px";
-    $(`<button data-action="userguide"><img src='/systems/ose/assets/dragon.png' width='16' height='16' style='${styling}'/>Old School Guide</button>`).insertAfter(docs);
+    $(`<button data-action="userguide"><img src='/systems/fgg/assets/dragon.png' width='16' height='16' style='${styling}'/>Old School Guide</button>`).insertAfter(docs);
     html.find('button[data-action="userguide"]').click(ev => {
       new FrameViewer('https://mesfoliesludiques.gitlab.io/foundryvtt-ose', {resizable: true}).render(true);
     });
@@ -106,7 +106,7 @@ Hooks.on("renderSidebarTab", async (object, html) => {
 });
 
 Hooks.on("preCreateCombatant", (combat, data, options, id) => {
-  let init = game.settings.get("ose", "initiative");
+  let init = game.settings.get("fgg", "initiative");
   if (init == "group") {
     OseCombat.addCombatant(combat, data, options, id);
   }
