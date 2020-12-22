@@ -1,4 +1,4 @@
-export class OseDice {
+export class FggDice {
   static digestResult(data, roll) {
     let result = {
       isSuccess: false,
@@ -51,7 +51,7 @@ export class OseDice {
     speaker = null,
     form = null,
   } = {}) {
-    const template = "systems/ose/templates/chat/roll-result.html";
+    const template = "systems/fgg/templates/chat/roll-result.html";
 
     let chatData = {
       user: game.user._id,
@@ -88,11 +88,11 @@ export class OseDice {
       data.roll.blindroll = true;
     }
 
-    templateData.result = OseDice.digestResult(data, roll);
+    templateData.result = FggDice.digestResult(data, roll);
 
     return new Promise((resolve) => {
       roll.render().then((r) => {
-        templateData.rollOSE = r;
+        templateData.rollFGG = r;
         renderTemplate(template, templateData).then((content) => {
           chatData.content = content;
           // Dice So Nice
@@ -136,31 +136,31 @@ export class OseDice {
       : 0;
     result.victim = data.roll.target ? data.roll.target.data.name : null;
 
-    if (game.settings.get("ose", "ascendingAC")) {
+    if (game.settings.get("fgg", "ascendingAC")) {
       if (roll.total < targetAac) {
         result.details = game.i18n.format(
-          "OSE.messages.AttackAscendingFailure",
+          "FGG.messages.AttackAscendingFailure",
           {
             bonus: result.target,
           }
         );
         return result;
       }
-      result.details = game.i18n.format("OSE.messages.AttackAscendingSuccess", {
+      result.details = game.i18n.format("FGG.messages.AttackAscendingSuccess", {
         result: roll.total,
       });
       result.isSuccess = true;
     } else {
       // B/X Historic THAC0 Calculation
       if (result.target - roll.total > targetAc) {
-        result.details = game.i18n.format("OSE.messages.AttackFailure", {
+        result.details = game.i18n.format("FGG.messages.AttackFailure", {
           bonus: result.target,
         });
         return result;
       }
       result.isSuccess = true;
       let value = Math.clamped(result.target - roll.total, -3, 9);
-      result.details = game.i18n.format("OSE.messages.AttackSuccess", {
+      result.details = game.i18n.format("FGG.messages.AttackSuccess", {
         result: value,
         bonus: result.target,
       });
@@ -176,7 +176,7 @@ export class OseDice {
     speaker = null,
     form = null,
   } = {}) {
-    const template = "systems/ose/templates/chat/roll-attack.html";
+    const template = "systems/fgg/templates/chat/roll-attack.html";
 
     let chatData = {
       user: game.user._id,
@@ -187,7 +187,7 @@ export class OseDice {
       title: title,
       flavor: flavor,
       data: data,
-      config: CONFIG.OSE,
+      config: CONFIG.FGG,
     };
 
     // Optionally include a situational bonus
@@ -213,11 +213,11 @@ export class OseDice {
       data.roll.blindroll = true;
     }
 
-    templateData.result = OseDice.digestAttackResult(data, roll);
+    templateData.result = FggDice.digestAttackResult(data, roll);
 
     return new Promise((resolve) => {
       roll.render().then((r) => {
-        templateData.rollOSE = r;
+        templateData.rollFGG = r;
         dmgRoll.render().then((dr) => {
           templateData.rollDamage = dr;
           renderTemplate(template, templateData).then((content) => {
@@ -272,7 +272,7 @@ export class OseDice {
     title = null,
   } = {}) {
     let rolled = false;
-    const template = "systems/ose/templates/chat/roll-dialog.html";
+    const template = "systems/fgg/templates/chat/roll-dialog.html";
     let dialogData = {
       formula: parts.join(" "),
       data: data,
@@ -287,32 +287,32 @@ export class OseDice {
       flavor: flavor,
       speaker: speaker,
     };
-    if (skipDialog) { return OseDice.sendRoll(rollData); }
+    if (skipDialog) { return FggDice.sendRoll(rollData); }
 
     let buttons = {
       ok: {
-        label: game.i18n.localize("OSE.Roll"),
+        label: game.i18n.localize("FGG.Roll"),
         icon: '<i class="fas fa-dice-d20"></i>',
         callback: (html) => {
           rolled = true;
           rollData.form = html[0].querySelector("form");
-          roll = OseDice.sendRoll(rollData);
+          roll = FggDice.sendRoll(rollData);
         },
       },
       magic: {
-        label: game.i18n.localize("OSE.saves.magic.short"),
+        label: game.i18n.localize("FGG.saves.magic.short"),
         icon: '<i class="fas fa-magic"></i>',
         callback: (html) => {
           rolled = true;
           rollData.form = html[0].querySelector("form");
           rollData.data.roll.target = parseInt(rollData.data.roll.target) + parseInt(rollData.data.roll.magic);
-          rollData.title += ` ${game.i18n.localize("OSE.saves.magic.short")} (${rollData.data.roll.magic})`;
-          roll = OseDice.sendRoll(rollData);
+          rollData.title += ` ${game.i18n.localize("FGG.saves.magic.short")} (${rollData.data.roll.magic})`;
+          roll = FggDice.sendRoll(rollData);
         },
       },
       cancel: {
         icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("OSE.Cancel"),
+        label: game.i18n.localize("FGG.Cancel"),
         callback: (html) => { },
       },
     };
@@ -343,7 +343,7 @@ export class OseDice {
     title = null,
   } = {}) {
     let rolled = false;
-    const template = "systems/ose/templates/chat/roll-dialog.html";
+    const template = "systems/fgg/templates/chat/roll-dialog.html";
     let dialogData = {
       formula: parts.join(" "),
       data: data,
@@ -360,25 +360,25 @@ export class OseDice {
     };
     if (skipDialog) {
       return ["melee", "missile", "attack"].includes(data.roll.type)
-        ? OseDice.sendAttackRoll(rollData)
-        : OseDice.sendRoll(rollData);
+        ? FggDice.sendAttackRoll(rollData)
+        : FggDice.sendRoll(rollData);
     }
 
     let buttons = {
       ok: {
-        label: game.i18n.localize("OSE.Roll"),
+        label: game.i18n.localize("FGG.Roll"),
         icon: '<i class="fas fa-dice-d20"></i>',
         callback: (html) => {
           rolled = true;
           rollData.form = html[0].querySelector("form");
           roll = ["melee", "missile", "attack"].includes(data.roll.type)
-            ? OseDice.sendAttackRoll(rollData)
-            : OseDice.sendRoll(rollData);
+            ? FggDice.sendAttackRoll(rollData)
+            : FggDice.sendRoll(rollData);
         },
       },
       cancel: {
         icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("OSE.Cancel"),
+        label: game.i18n.localize("FGG.Cancel"),
         callback: (html) => { },
       },
     };
