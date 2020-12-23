@@ -8,7 +8,7 @@
   "templateVersion": 2,
   "author": "GMsShadow",
   "esmodules": ["fgg.js"],
-  "styles": ["fgg.css"],
+  "styles": ["fgg.scss"],
   "packs": [],
   "languages": [
     {
