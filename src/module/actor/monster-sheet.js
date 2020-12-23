@@ -1,10 +1,10 @@
-import { OseActor } from "./entity.js";
-import { OseActorSheet } from "./actor-sheet.js";
+import { FggActor } from "./entity.js";
+import { FggActorSheet } from "./actor-sheet.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
  */
-export class OseActorSheetMonster extends OseActorSheet {
+export class FggActorSheetMonster extends FggActorSheet {
   constructor(...args) {
     super(...args);
   }
@@ -18,7 +18,7 @@ export class OseActorSheetMonster extends OseActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["fgg", "sheet", "monster", "actor"],
-      template: "systems/ose/templates/actors/monster-sheet.html",
+      template: "systems/fgg/templates/actors/monster-sheet.html",
       width: 450,
       height: 560,
       resizable: true,
@@ -36,7 +36,7 @@ export class OseActorSheetMonster extends OseActorSheet {
    * Monster creation helpers
    */
   async generateSave() {
-    let choices = CONFIG.OSE.monster_saves;
+    let choices = CONFIG.FGG.monster_saves;
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
@@ -45,11 +45,11 @@ export class OseActorSheetMonster extends OseActorSheet {
       );
     //Create Dialog window
     new Dialog({
-      title: game.i18n.localize("OSE.dialog.generateSaves"),
+      title: game.i18n.localize("FGG.dialog.generateSaves"),
       content: dlg,
       buttons: {
         ok: {
-          label: game.i18n.localize("OSE.Ok"),
+          label: game.i18n.localize("FGG.Ok"),
           icon: '<i class="fas fa-check"></i>',
           callback: (html) => {
             let hd = html.find('select[name="choice"]').val();
@@ -58,7 +58,7 @@ export class OseActorSheetMonster extends OseActorSheet {
         },
         cancel: {
           icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("OSE.Cancel"),
+          label: game.i18n.localize("FGG.Cancel"),
         },
       },
       default: "ok",
@@ -113,11 +113,11 @@ export class OseActorSheetMonster extends OseActorSheet {
     //Create Dialog window
     return new Promise((resolve) => {
       new Dialog({
-        title: game.i18n.localize("OSE.dialog.createItem"),
+        title: game.i18n.localize("FGG.dialog.createItem"),
         content: dlg,
         buttons: {
           ok: {
-            label: game.i18n.localize("OSE.Ok"),
+            label: game.i18n.localize("FGG.Ok"),
             icon: '<i class="fas fa-check"></i>',
             callback: (html) => {
               resolve({
@@ -128,7 +128,7 @@ export class OseActorSheetMonster extends OseActorSheet {
           },
           cancel: {
             icon: '<i class="fas fa-times"></i>',
-            label: game.i18n.localize("OSE.Cancel"),
+            label: game.i18n.localize("FGG.Cancel"),
           },
         },
         default: "ok",
@@ -252,7 +252,7 @@ export class OseActorSheetMonster extends OseActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.getOwnedItem(li.data("itemId"));
       let currentColor = item.data.data.pattern;
-      let colors = Object.keys(CONFIG.OSE.colors);
+      let colors = Object.keys(CONFIG.FGG.colors);
       let index = colors.indexOf(currentColor);
       if (index + 1 == colors.length) {
         index = 0;
