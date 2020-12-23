@@ -1,13 +1,13 @@
-import { OseActor } from '../actor/entity.js';
-import { OseDice } from "../dice.js";
+import { FggActor } from '../actor/entity.js';
+import { FggDice } from "../dice.js";
 
-export class OseCharacterCreator extends FormApplication {
+export class FggCharacterCreator extends FormApplication {
   static get defaultOptions() {
     const options = super.defaultOptions;
-    options.classes = ["ose", "dialog", "creator"],
+    options.classes = ["fgg", "dialog", "creator"],
       options.id = 'character-creator';
     options.template =
-      'systems/ose/templates/actors/dialogs/character-creation.html';
+      'systems/fgg/templates/actors/dialogs/character-creation.html';
     options.width = 235;
     return options;
   }
@@ -19,7 +19,7 @@ export class OseCharacterCreator extends FormApplication {
    * @type {String}
    */
   get title() {
-    return `${this.object.name}: ${game.i18n.localize('OSE.dialog.generator')}`;
+    return `${this.object.name}: ${game.i18n.localize('FGG.dialog.generator')}`;
   }
 
   /* -------------------------------------------- */
@@ -31,7 +31,7 @@ export class OseCharacterCreator extends FormApplication {
   getData() {
     let data = this.object.data;
     data.user = game.user;
-    data.config = CONFIG.OSE;
+    data.config = CONFIG.FGG;
     data.counters = {
       str: 0,
       wis: 0,
@@ -85,7 +85,7 @@ export class OseCharacterCreator extends FormApplication {
     // Increase counter
     this.object.data.counters[score]++;
 
-    const label = score != "gold" ? game.i18n.localize(`OSE.scores.${score}.long`) : "Gold";
+    const label = score != "gold" ? game.i18n.localize(`FGG.scores.${score}.long`) : "Gold";
     const rollParts = ["3d6"];
     const data = {
       roll: {
@@ -93,14 +93,14 @@ export class OseCharacterCreator extends FormApplication {
       }
     };
     // Roll and return
-    return OseDice.Roll({
+    return FggDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
       skipDialog: true,
       speaker: ChatMessage.getSpeaker({ actor: this }),
-      flavor: game.i18n.format('OSE.dialog.generateScore', { score: label, count: this.object.data.counters[score] }),
-      title: game.i18n.format('OSE.dialog.generateScore', { score: label, count: this.object.data.counters[score] }),
+      flavor: game.i18n.format('FGG.dialog.generateScore', { score: label, count: this.object.data.counters[score] }),
+      title: game.i18n.format('FGG.dialog.generateScore', { score: label, count: this.object.data.counters[score] }),
     });
   }
 
@@ -116,13 +116,13 @@ export class OseCharacterCreator extends FormApplication {
     const gold = $(this.form.children).find('.gold-value').val();
     const speaker = ChatMessage.getSpeaker({ actor: this });
     const templateData = {
-      config: CONFIG.OSE,
+      config: CONFIG.FGG,
       scores: scores,
-      title: game.i18n.localize("OSE.dialog.generator"),
+      title: game.i18n.localize("FGG.dialog.generator"),
       stats: this.object.data.stats,
       gold: gold
     }
-    const content = await renderTemplate("/systems/ose/templates/chat/roll-creation.html", templateData)
+    const content = await renderTemplate("/systems/fgg/templates/chat/roll-creation.html", templateData)
     ChatMessage.create({
       content: content,
       speaker,
@@ -159,7 +159,7 @@ export class OseCharacterCreator extends FormApplication {
     const itemData = {
       name: "GP",
       type: "item",
-      img: "/systems/ose/assets/gold.png",
+      img: "/systems/fgg/assets/gold.png",
       data: {
         treasure: true,
         cost: 1,
