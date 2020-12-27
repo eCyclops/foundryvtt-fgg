@@ -602,7 +602,7 @@ export class FggActor extends Actor {
       return;
     }
     // Compute AC
-    let baseAc = 9;
+    let baseAc = 10;
     let baseAac = 10;
     let AcShield = 0;
     let AacShield = 0;
@@ -645,25 +645,25 @@ export class FggActor extends Actor {
       standard,
       data.scores.str.value
     );
-    data.scores.int.mod = FggActor._valueFromTable(
-      standard,
-      data.scores.int.value
-    );
     data.scores.dex.mod = FggActor._valueFromTable(
       standard,
       data.scores.dex.value
     );
-    data.scores.cha.mod = FggActor._valueFromTable(
+    data.scores.con.mod = FggActor._valueFromTable(
       standard,
-      data.scores.cha.value
+      data.scores.con.value
+    );
+    data.scores.int.mod = FggActor._valueFromTable(
+      standard,
+      data.scores.int.value
     );
     data.scores.wis.mod = FggActor._valueFromTable(
       standard,
       data.scores.wis.value
     );
-    data.scores.con.mod = FggActor._valueFromTable(
+    data.scores.cha.mod = FggActor._valueFromTable(
       standard,
-      data.scores.con.value
+      data.scores.cha.value
     );
 
     const capped = {
