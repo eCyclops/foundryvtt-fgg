@@ -1,10 +1,10 @@
 export const FGG = {
   scores: {
     str: "FGG.scores.str.long",
-    int: "FGG.scores.int.long",
     dex: "FGG.scores.dex.long",
-    wis: "FGG.scores.wis.long",
     con: "FGG.scores.con.long",
+    int: "FGG.scores.int.long",
+    wis: "FGG.scores.wis.long",
     cha: "FGG.scores.cha.long",
   },
   roll_type: {
