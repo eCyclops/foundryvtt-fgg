@@ -2,7 +2,7 @@
 All the features you need to play For Gold & Glory or the 2nd Edition of the worlds most popular roleplaying game in Foundry VTT.
 
 ## Installation
-You can find this Foundry VTT game system within Foundry VTT in the system browser. You could also download the latest archive in the package folder, or use the manifest link below.\
+For the most up to date version of this system, please use the manifest link below.\
 https://gitlab.com/gmsshadow2/foundryvtt-fgg/-/raw/master/src/system.json
 
 ## License
