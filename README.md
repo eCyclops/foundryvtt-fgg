@@ -23,3 +23,16 @@ Feel free to grab a TO DO issue from the gitlab board. You can then do a merge r
 The framework for this system is based on the Old-School Essentials system by U-Man which can be found [here](https://gitlab.com/mesfoliesludiques/foundryvtt-ose). If you wish to support the original author please use the Ko-fi link below.
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H21WMKA)
+
+## Known Issues
+- The character creation dialogue box does not close for some reason (help would be appreciated in finding the errant code)
+- 'Magic-User' default class for spells (I can't find the preset for this to make it FGG appropriate)
+
+## To-Do List
+- Add the appropriate modifiers for all the attributes (currently using OSE modifiers)
+- Try to work out a way to add size category damage (S/M L)
+- Validate monster saves as per FGG
+- Modify preset abilities (open doors, bend bars etc. to FGG)
+- Modify armour categories to FGG
+- Consider weapon speed (this might be optimistic for my skills)
+- Validate encumbrance  and speed with FGG
