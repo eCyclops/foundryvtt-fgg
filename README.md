@@ -1,12 +1,12 @@
 # For Gold & Glory System for Foundry VTT (Unofficial)
-All the features you need to play For Gold & Glory or the 2nd Edition of the worlds most popular roleplaying game in Foundry VTT.\
+All the features you need to play For Gold & Glory™ or the 2nd Edition of the worlds most popular roleplaying game in Foundry VTT.\
 
 ## Installation
 For the most up to date version of this system, please use the manifest link below.\
 https://gitlab.com/gmsshadow2/foundryvtt-fgg/-/raw/master/src/system.json
 
 ## License
-This Foundry VTT system requires For Gold & Glory Rules that you can find [here](https://www.drivethrurpg.com/product/156530/For-Gold--Glory). If you enjoyed the game please support the artist by purchasing a copy of the rules.
+This Foundry VTT system requires For Gold & Glory™ Rules that you can find [here](https://www.drivethrurpg.com/product/156530/For-Gold--Glory). If you enjoyed the game please support the artist by purchasing a copy of the rules.
 
 For Gold & Glory™ and FG&G™ are trademarks of Justen Brown. This work is not affiliated with Justen Brown.”
 
@@ -24,7 +24,7 @@ The framework for this system is based on the Old-School Essentials system by U-
 
 ## Known Issues
 - The character creation dialogue box does not close for some reason (help would be appreciated in finding the errant code)
-- 'Magic-User' default class for spells (I can't find the preset for this to make it FGG appropriate)
+- 'Magic-User' default class for spells (I can't find the preset for this to make it FG&G™ appropriate)
 
 ## To-Do List
 - Add the appropriate modifiers for all the attributes (currently using OSE modifiers)
