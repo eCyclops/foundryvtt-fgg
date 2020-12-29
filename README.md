@@ -1,5 +1,6 @@
 # For Gold & Glory System for Foundry VTT (Unofficial)
-All the features you need to play For Gold & Glory or the 2nd Edition of the worlds most popular roleplaying game in Foundry VTT.
+All the features you need to play For Gold & Glory or the 2nd Edition of the worlds most popular roleplaying game in Foundry VTT.\
+If you enjoyed the game please support the artist by purchasing a copy of the rules.
 
 ## Installation
 For the most up to date version of this system, please use the manifest link below.\
@@ -8,9 +9,7 @@ https://gitlab.com/gmsshadow2/foundryvtt-fgg/-/raw/master/src/system.json
 ## License
 This Foundry VTT system requires For Gold & Glory Rules that you can find [here](https://www.drivethrurpg.com/product/156530/For-Gold--Glory).
 
-This third party product is not affiliated with or approved by God Emperor Games. \
-For Gold & Glory is a trademark of God Emperor Games.\
-The trademark and For Gold & Glory logo are used with permission of God Emperor Games, under license.
+For Gold & Glory™ and FG&G™ are trademarks of Justen Brown. This work is not affiliated with Justen Brown.”
 
 ## Artwork
 Weapon quality icons, and the Treasure chest are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).
