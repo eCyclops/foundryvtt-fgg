@@ -28,7 +28,7 @@ The framework for this system is based on the Old-School Essentials system by U-
 ## To-Do List
 - Add the appropriate modifiers for all the attributes (currently using OSE modifiers)
 - Try to work out a way to add size category damage (S/M L)
-- Validate monster saves as per FGG
+- ~~Validate monster saves as per FGG~~
 - Modify preset abilities (open doors, bend bars etc. to FGG)
 - Modify armour categories to FGG
 - Consider weapon speed (this might be optimistic for my skills)
