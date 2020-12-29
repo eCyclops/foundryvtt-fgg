@@ -6,9 +6,9 @@ For the most up to date version of this system, please use the manifest link bel
 https://gitlab.com/gmsshadow2/foundryvtt-fgg/-/raw/master/src/system.json
 
 ## License
-This Foundry VTT system requires For Gold & Glory™ Rules that you can find [here](https://www.drivethrurpg.com/product/156530/For-Gold--Glory). If you enjoyed the game please support the artist by purchasing a copy of the rules.
-
 For Gold & Glory™ and FG&G™ are trademarks of Justen Brown. This work is not affiliated with Justen Brown.
+
+This Foundry VTT system requires For Gold & Glory™ Rules that you can find [here](https://www.drivethrurpg.com/product/156530/For-Gold--Glory). If you enjoyed the game please support the artist by purchasing a copy of the rules.
 
 ## Artwork
 Weapon quality icons, and the Treasure chest are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).
