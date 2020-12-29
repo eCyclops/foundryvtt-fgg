@@ -1,5 +1,5 @@
 # For Gold & Glory System for Foundry VTT (Unofficial)
-All the features you need to play For Gold & Glory™ or the 2nd Edition of the worlds most popular roleplaying game in Foundry VTT.\
+All the features you need to play For Gold & Glory™ or the 2nd Edition of the worlds most popular roleplaying game in Foundry VTT.
 
 ## Installation
 For the most up to date version of this system, please use the manifest link below.\
@@ -14,8 +14,7 @@ For Gold & Glory™ and FG&G™ are trademarks of Justen Brown. This work is not
 Weapon quality icons, and the Treasure chest are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).
 
 ## Contributions
-Any feedback is deeply appreciated. Please issue [tickets](https://gitlab.com/gmsshadow2/foundryvtt-fgg/-/boards).\
-Feel free to grab a TO DO issue from the gitlab board. You can then do a merge request on the `development` branch.
+Any feedback is deeply appreciated. Please issue [tickets](https://gitlab.com/gmsshadow2/foundryvtt-fgg/-/boards).
 
 ## Attribution
 The framework for this system is based on the Old-School Essentials system by U-Man which can be found [here](https://gitlab.com/mesfoliesludiques/foundryvtt-ose). If you wish to support the original author please use the Ko-fi link below.
