@@ -104,30 +104,30 @@ export class FggCharacterCreator extends FormApplication {
     });
   }
 
-  async close() {
-    super.close();
+  // async close() {
+  //  super.close();
     // Gather scores
-    let scores = {};
-    $(this.form.children).find(".score-roll").each((_, d) => {
-      let gr = $(d).closest('.form-group');
-      let val = gr.find(".score-value").val();
-      scores[gr.data("score")] = val;
-    })
-    const gold = $(this.form.children).find('.gold-value').val();
-    const speaker = ChatMessage.getSpeaker({ actor: this });
-    const templateData = {
-      config: CONFIG.FGG,
-      scores: scores,
-      title: game.i18n.localize("FGG.dialog.generator"),
-      stats: this.object.data.stats,
-      gold: gold
-    }
-    const content = await renderTemplate("/systems/fgg/templates/chat/roll-creation.html", templateData)
-    ChatMessage.create({
-      content: content,
-      speaker,
-    });
-  }
+  //  let scores = {};
+  //  $(this.form.children).find(".score-roll").each((_, d) => {
+  //    let gr = $(d).closest('.form-group');
+  //    let val = gr.find(".score-value").val();
+  //    scores[gr.data("score")] = val;
+  //  })
+  //  const gold = $(this.form.children).find('.gold-value').val();
+  //  const speaker = ChatMessage.getSpeaker({ actor: this });
+  //  const templateData = {
+  //    config: CONFIG.FGG,
+  //    scores: scores,
+  //    title: game.i18n.localize("FGG.dialog.generator"),
+  //    stats: this.object.data.stats,
+  //    gold: gold
+  //  }
+  //  const content = await renderTemplate("/systems/fgg/templates/chat/roll-creation.html", templateData)
+  //  ChatMessage.create({
+  //    content: content,
+  //    speaker,
+  //  });
+  // }
 
   /** @override */
   activateListeners(html) {
