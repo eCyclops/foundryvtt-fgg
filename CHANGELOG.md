@@ -10,3 +10,10 @@ All notable changes to this project will be documented in this file.
 - Changed ose tags in code to ffg tags (where found so far)
 ### Removed
 - package files for old OSE repo
+
+## [0.0.21 - 0.0.23] - 2020-12-30
+### Added
+### Changed
+- Saving throws genertated for Monster sheets now match FG&G values
+### Removed
+- Final display for character creation dialogue, this has bypassed the bug that stopped this window from closing
