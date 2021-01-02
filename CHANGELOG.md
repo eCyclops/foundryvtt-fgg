@@ -17,3 +17,10 @@ All notable changes to this project will be documented in this file.
 - Saving throws genertated for Monster sheets now match FG&G values
 ### Removed
 - Final display for character creation dialogue, this has bypassed the bug that stopped this window from closing
+
+## [0.0.24] - 2021-01-02
+### Added
+- .db files for armor, equipment, non-combat skills, weapons and wizard spells for compendium
+### Changed
+- system.json to inititate compendium packs
+### Removed
