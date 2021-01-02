@@ -2,14 +2,60 @@
   "name": "fgg",
   "title": "For Gold & Glory",
   "description": "For Gold & Glory™ is compatible with the second edition of the “advanced” version of the world’s most popular role-playing game",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "minimumCoreVersion": "0.7.9",
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
   "author": "GMsShadow",
   "esmodules": ["fgg.js"],
   "styles": ["fgg.css"],
-  "packs": [],
+  "packs": [
+       {
+      "label": "Armor",
+      "entity": "Item",
+      "name": "armor",
+      "path": "packs/armor.db",
+      "system": "fgg",
+      "package": "world",
+      "absPath": "systems/fgg/packs/armor.db"
+    },
+    {
+      "label": "Non-Combat Skills",
+      "entity": "Item",
+      "name": "non-combat-skills",
+      "path": "packs/non-combat-skills.db",
+      "system": "fgg",
+      "package": "world",
+      "absPath": "systems/fgg/packs/non-combat-skills.db"
+    },
+    {
+      "label": "Wizard Spells",
+      "entity": "Item",
+      "name": "wizard-spells",
+      "path": "packs/wizard-spells.db",
+      "system": "fgg",
+      "package": "world",
+      "absPath": "systems/fgg/packs/wizard-spells.db"
+    },
+    {
+      "label": "Weapons",
+      "entity": "Item",
+      "name": "weapons",
+      "path": "packs/weapons.db",
+      "system": "fgg",
+      "package": "world",
+      "absPath": "systems/fgg/packs/weapons.db"
+    },
+    {
+      "label": "Equipment",
+      "entity": "Item",
+      "name": "equipment",
+      "path": "packs/equipment.db",
+      "system": "fgg",
+      "package": "world",
+      "absPath": "systems/fgg/packs/equipment.db"
+    } 
+  ],
   "languages": [
     {
       "lang": "en",
