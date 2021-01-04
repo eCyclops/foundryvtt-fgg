@@ -24,3 +24,9 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - system.json to inititate compendium packs
 ### Removed
+
+## [0.0.25] - 2021-01-03
+### Added
+### Changed
+- Strength melee modifiers now use the correct attack and damage adjustments for FG&G (excluding fighter exceptional Strength)
+### Removed
