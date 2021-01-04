@@ -418,7 +418,7 @@ export class FggActor extends Actor {
     }
     if (options.type == "missile") {
       rollParts.push(
-        data.scores.dex.mod.toString(),
+        data.scores.dex.reactmiss.toString(),
         data.thac0.mod.missile.toString()
       );
     } else if (options.type == "melee") {
@@ -607,8 +607,8 @@ export class FggActor extends Actor {
     let AcShield = 0;
     let AacShield = 0;
     const data = this.data.data;
-    data.aac.naked = baseAac + data.scores.dex.mod;
-    data.ac.naked = baseAc - data.scores.dex.mod;
+    data.aac.naked = baseAac - data.scores.dex.defadj;
+    data.ac.naked = baseAc + data.scores.dex.defadj;
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
       if (a.data.equipped && a.data.type != "shield") {
@@ -619,8 +619,8 @@ export class FggActor extends Actor {
         AacShield = a.data.aac.value;
       }
     });
-    data.aac.value = baseAac + data.scores.dex.mod + AacShield + data.aac.mod;
-    data.ac.value = baseAc - data.scores.dex.mod - AcShield - data.ac.mod;
+    data.aac.value = baseAac - data.scores.dex.defadj - AacShield - data.aac.mod;
+    data.ac.value = baseAc + data.scores.dex.defadj + AcShield + data.ac.mod;
     data.ac.shield = AcShield;
     data.aac.shield = AacShield;
   }
@@ -698,7 +698,30 @@ export class FggActor extends Actor {
      24: 5,
     };
     data.scores.dex.reactmiss = FggActor._valueFromTable(
-      reactdef,
+      reactmiss,
+      data.scores.dex.value
+    );
+
+    const dexdef = {
+     0: 5,
+     3: 4,
+     4: 3,
+     5: 2,
+     6: 1,
+     7: 0,
+     15: -1,
+     16: -2,
+     17: -3,
+     18: -4,
+     21: -5,
+     24: -6,
+    };
+    data.scores.dex.defadj = FggActor._valueFromTable(
+      dexdef,
+      data.scores.dex.value
+    );
+        data.scores.dex.mod = FggActor._valueFromTable(
+      standard,
       data.scores.dex.value
     );
     data.scores.con.mod = FggActor._valueFromTable(
