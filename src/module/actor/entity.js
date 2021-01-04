@@ -683,8 +683,22 @@ export class FggActor extends Actor {
       strdamage,
       data.scores.str.value
     );
-    data.scores.dex.mod = FggActor._valueFromTable(
-      standard,
+
+    const reactmiss = {
+     0: -6,
+     2: -4,
+     3: -3,
+     4: -2,
+     5: -1,
+     6: 0,
+     16: 1,
+     17: 2,
+     19: 3,
+     21: 4,
+     24: 5,
+    };
+    data.scores.dex.reactmiss = FggActor._valueFromTable(
+      reactdef,
       data.scores.dex.value
     );
     data.scores.con.mod = FggActor._valueFromTable(
