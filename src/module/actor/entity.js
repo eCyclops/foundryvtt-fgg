@@ -367,7 +367,7 @@ export class FggActor extends Actor {
 
     // Add Str to damage
     if (attData.roll.type == "melee") {
-      dmgParts.push(data.scores.str.mod);
+      dmgParts.push(data.scores.str.dmg);
     }
 
     // Damage roll
@@ -423,7 +423,7 @@ export class FggActor extends Actor {
       );
     } else if (options.type == "melee") {
       rollParts.push(
-        data.scores.str.mod.toString(),
+        data.scores.str.atk.toString(),
         data.thac0.mod.melee.toString()
       );
     }
@@ -432,7 +432,7 @@ export class FggActor extends Actor {
     }
     let thac0 = data.thac0.value;
     if (options.type == "melee") {
-      dmgParts.push(data.scores.str.mod);
+      dmgParts.push(data.scores.str.dmg);
     }
     const rollData = {
       actor: this.data,
@@ -641,8 +641,46 @@ export class FggActor extends Actor {
       16: 2,
       18: 3,
     };
+
+    const strattack = {
+     0: -5,
+     2: -3,
+     4: -2,
+     6: -1,
+     8: 0,
+     17: 1,
+     19: 3,
+     21: 4,
+     23: 5,
+     24: 6,
+     25: 7,
+    };
+
+    const strdamage = {
+     0: -4,
+     2: -2,
+     3: -1,
+     6: 0,
+     16: 1,
+     18: 2,
+     19: 7,
+     20: 8,
+     21: 9,
+     22: 10,
+     23: 11,
+     24: 12,
+     25: 14,
+    };
     data.scores.str.mod = FggActor._valueFromTable(
       standard,
+      data.scores.str.value
+    );
+    data.scores.str.atk = FggActor._valueFromTable(
+      strattack,
+      data.scores.str.value
+    );
+    data.scores.str.dmg = FggActor._valueFromTable(
+      strdamage,
       data.scores.str.value
     );
     data.scores.dex.mod = FggActor._valueFromTable(
