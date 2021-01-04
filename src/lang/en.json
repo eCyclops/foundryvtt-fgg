@@ -130,6 +130,7 @@
   "FGG.MissileShort": "MIS",
   "FGG.Missile": "Missile",
   "FGG.MissileBonus": "Missile Bonus",
+  "FGG.MeleeDamage": "Melee Damage",
   "FGG.Initiative": "Initiative",
   "FGG.InitiativeBonus": "Initiative Bonus",
   "FGG.InitiativeShort": "INIT",
