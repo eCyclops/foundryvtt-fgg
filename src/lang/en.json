@@ -133,6 +133,7 @@
   "FGG.MeleeDamage": "Melee Damage",
   "FGG.Initiative": "Initiative",
   "FGG.InitiativeBonus": "Initiative Bonus",
+  "FGG.ReactionBonus": "Reaction Bonus",
   "FGG.InitiativeShort": "INIT",
   "FGG.Attacks": "Attacks Usable per Round",
   "FGG.AttacksShort": "ATT",
