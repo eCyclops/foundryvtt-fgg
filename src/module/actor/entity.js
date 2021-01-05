@@ -738,6 +738,57 @@ export class FggActor extends Actor {
       data.scores.str.value
     );
 
+    const fd = {
+     0: 0,
+     1: 1,
+     2: 1,
+     3: 2,
+     4: 3,
+     6: 4,
+     8: 5,
+     10: 6,
+     12: 7,
+     14: 8,
+     16: 9,
+     17: 10,
+     18: 11,
+     19: 16,
+     20: 17,
+     21: 17,
+     22: 18,
+     23: 18,
+     24: 19,
+     25: 19,
+    };
+    data.scores.str.fd = FggActor._valueFromTable(
+      fd,
+      data.scores.str.value
+    );
+
+    const bendlift = {
+     0: 0,
+     6: 0,
+     8: 1,
+     10: 2,
+     12: 4,
+     14: 7,
+     16: 10,
+     17: 13,
+     18: 16,
+     19: 50,
+     20: 60,
+     21: 70,
+     22: 80,
+     23: 90,
+     24: 95,
+     25: 99,
+    };
+    data.scores.str.bendlift = FggActor._valueFromTable(
+      bendlift,
+      data.scores.str.value
+    );
+
+
     const reactmiss = {
      0: -6,
      2: -4,
