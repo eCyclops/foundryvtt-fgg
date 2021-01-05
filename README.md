@@ -23,7 +23,7 @@ The framework for this system is based on the Old-School Essentials system by U-
 
 ## Known Issues
 - ~~The character creation dialogue box does not close for some reason~~ (Tempoary fix in place but help would be appreciated in finding the errant code)
-- 'Magic-User' default class for spells (I can't find the preset for this to make it FG&G™ appropriate)
+- ~~'Magic-User' default class for spells~~
 
 ## To-Do List
 - Add the appropriate modifiers for all the attributes (currently using OSE modifiers)
