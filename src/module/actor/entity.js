@@ -265,7 +265,7 @@ export class FggActor extends Actor {
     const label = game.i18n.localize(`FGG.roll.hd`);
     const rollParts = [this.data.data.hp.hd];
     if (this.data.type == "character") {
-      rollParts.push(this.data.data.scores.con.mod);
+      rollParts.push(this.data.data.scores.con.hpmod);
     }
 
     const data = {
