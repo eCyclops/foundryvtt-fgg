@@ -684,6 +684,60 @@ export class FggActor extends Actor {
       data.scores.str.value
     );
 
+    const nonencum = {
+     0: 0,
+     1: 1,
+     2: 5,
+     3: 5,
+     4: 10,
+     6: 20,
+     8: 35,
+     10: 40,
+     12: 45,
+     14: 55,
+     16: 70,
+     17: 85,
+     18: 110,
+     19: 485,
+     20: 535,
+     21: 635,
+     22: 785,
+     23: 935,
+     24: 1235,
+     25: 1535,
+    };
+    data.scores.str.nonencum = FggActor._valueFromTable(
+      nonencum,
+      data.scores.str.value
+    );
+
+    const maxweight = {
+     0: 0,
+     1: 3,
+     2: 5,
+     3: 10,
+     4: 20,
+     6: 55,
+     8: 90,
+     10: 115,
+     12: 135,
+     14: 165,
+     16: 180,
+     17: 220,
+     18: 255,
+     19: 640,
+     20: 700,
+     21: 810,
+     22: 970,
+     23: 1130,
+     24: 1440,
+     25: 1750,
+    };
+    data.scores.str.maxweight = FggActor._valueFromTable(
+      maxweight,
+      data.scores.str.value
+    );
+
     const reactmiss = {
      0: -6,
      2: -4,
