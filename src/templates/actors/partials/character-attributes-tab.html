@@ -74,12 +74,12 @@
     <div class="resources">
         <div class="flexrow">
             <div class="health">
-                <input class="health-value health-top" name="data.hp.value" type="text" value="{{data.hp.value}}"
+                <input class="health-value health-top" name="data.attributes.hp.value" type="text" value="{{data.attributes.hp.value}}"
                     data-dtype="Number" placeholder="0" title="{{localize 'FGG.Health'}}" />
                 <input class="health-value health-bottom" name="data.hp.max" type="text" value="{{data.hp.max}}"
                     data-dtype="Number" placeholder="0" title="{{localize 'FGG.HealthMax'}}" />
-                <div class="health-empty" style="height:{{counter false data.hp.value data.hp.max}}%"></div>
-                <div class="health-full" style="height:{{counter true data.hp.value data.hp.max}}%"></div>
+                <div class="health-empty" style="height:{{counter false data.attributes.hp.value data.attributes.hp.max}}%"></div>
+                <div class="health-full" style="height:{{counter true data.attributes.hp.value data.attributes.hp.max}}%"></div>
             </div>
             <div class="health armor-class">
                 {{#if config.ascendingAC}}
