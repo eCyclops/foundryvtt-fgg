@@ -22,7 +22,7 @@ The framework for this system is based on the Old-School Essentials system by U-
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H21WMKA)
 
 ## Known Issues
-- ~~The character creation dialogue box does not close for some reason~~ (Tempoary fix in place but help would be appreciated in finding the errant code)
+- ~~The character creation dialogue box does not close for some reason~~
 - ~~'Magic-User' default class for spells~~
 
 ## To-Do List
