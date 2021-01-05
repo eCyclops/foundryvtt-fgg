@@ -1,8 +1,8 @@
 export const preloadHandlebarsTemplates = async function () {
     const templatePaths = [
         //Character Sheets
-        'systems/fgg/templates/actors/character-html.html',
-        'systems/fgg/templates/actors/monster-html.html',
+        'systems/fgg/templates/actors/character-sheet.html',
+        'systems/fgg/templates/actors/monster-sheet.html',
         //Actor partials
         //Sheet tabs
         'systems/fgg/templates/actors/partials/character-header.html',
