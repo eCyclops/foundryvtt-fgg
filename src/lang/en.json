@@ -101,6 +101,7 @@
   "FGG.saves.magic.short": "Mental Defence",
 
   "FGG.Health": "Hit Points",
+  "FGG.HealthBonus": "HP Mod",
   "FGG.HealthMax": "Maximum Hit Points",
   "FGG.HealthShort": "HP",
   "FGG.HitDice": "Hit Dice",
