@@ -829,6 +829,107 @@ export class FggActor extends Actor {
       standard,
       data.scores.dex.value
     );
+
+    const hpmod = {
+     0: -3,
+     1: -3,
+     2: -2,
+     4: -1,
+     7: 0,
+     15: 1,
+     16: 2,
+    };
+    data.scores.con.hpmod = FggActor._valueFromTable(
+      hpmod,
+      data.scores.con.value
+    );
+
+    const systemshock = {
+     0: 0,
+     1: 25,
+     2: 30,
+     3: 35,
+     4: 40,
+     5: 45,
+     6: 50,
+     7: 55,
+     8: 60,
+     9: 65,
+     10: 70,
+     11: 75,
+     12: 80,
+     13: 85,
+     14: 88,
+     15: 90,
+     16: 95,
+     17: 97,
+     18: 99,
+     25: 100,
+    };
+
+    data.scores.con.systemshock = FggActor._valueFromTable(
+      systemshock,
+      data.scores.con.value
+    );
+
+    const resurrectionchance = {
+     0: 0,
+     1: 30,
+     2: 35,
+     3: 40,
+     4: 45,
+     5: 50,
+     6: 55,
+     7: 60,
+     8: 65,
+     9: 70,
+     10: 75,
+     11: 80,
+     12: 85,
+     13: 90,
+     14: 92,
+     15: 94,
+     16: 96,
+     17: 98,
+     18: 100,
+    };
+
+    data.scores.con.resurrectionchance = FggActor._valueFromTable(
+      resurrectionchance,
+      data.scores.con.value
+    );
+
+    const poisonresist = {
+     0: -2,
+     1: -2,
+     2: -1,
+     3: 0,
+     19: 1,
+     21: 2,
+     23: 3,
+     25: 4,
+    };
+
+    data.scores.con.poisonresist = FggActor._valueFromTable(
+      poisonresist,
+      data.scores.con.value
+    );
+
+    const regeneration = {
+     0: 0,
+     20: 6,
+     21: 5,
+     22: 4,
+     23: 3,
+     24: 2,
+     25: 1,
+    };
+
+    data.scores.con.regeneration = FggActor._valueFromTable(
+      regeneration,
+      data.scores.con.value
+    );
+
     data.scores.con.mod = FggActor._valueFromTable(
       standard,
       data.scores.con.value
