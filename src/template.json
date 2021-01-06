@@ -8,12 +8,10 @@
           "loyalty": 0,
           "wage": ""
         },
-        "attributes": {
-          "hp": {
-            "hd": "1d8",
-            "value": 20,
-            "max": 20
-          },
+        "hp": {
+          "hd": "1d8",
+          "value": 20,
+          "max": 20
         },
         "ac": {
           "value": 0,
