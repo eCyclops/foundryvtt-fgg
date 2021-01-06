@@ -467,7 +467,7 @@ export class FggActor extends Actor {
 
     // Update the Actor
     return this.update({
-      "data.attributes.hp.value": dh,
+      "data.hp.value": dh,
     });
   }
 
