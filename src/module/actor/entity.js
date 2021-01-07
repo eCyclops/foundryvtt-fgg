@@ -641,7 +641,6 @@ export class FggActor extends Actor {
       16: 2,
       18: 3,
     };
-
     const strattack = {
      0: -5,
      2: -3,
@@ -655,7 +654,6 @@ export class FggActor extends Actor {
      24: 6,
      25: 7,
     };
-
     const strdamage = {
      0: -4,
      2: -2,
@@ -683,7 +681,6 @@ export class FggActor extends Actor {
       strdamage,
       data.scores.str.value
     );
-
     const nonencum = {
      0: 0,
      1: 1,
@@ -710,7 +707,6 @@ export class FggActor extends Actor {
       nonencum,
       data.scores.str.value
     );
-
     const maxweight = {
      0: 0,
      1: 3,
@@ -737,7 +733,6 @@ export class FggActor extends Actor {
       maxweight,
       data.scores.str.value
     );
-
     const fd = {
      0: 0,
      1: 1,
@@ -764,7 +759,6 @@ export class FggActor extends Actor {
       fd,
       data.scores.str.value
     );
-
     const bendlift = {
      0: 0,
      6: 0,
@@ -787,8 +781,6 @@ export class FggActor extends Actor {
       bendlift,
       data.scores.str.value
     );
-
-
     const reactmiss = {
      0: -6,
      2: -4,
@@ -806,7 +798,6 @@ export class FggActor extends Actor {
       reactmiss,
       data.scores.dex.value
     );
-
     const dexdef = {
      0: 5,
      3: 4,
@@ -829,7 +820,6 @@ export class FggActor extends Actor {
       standard,
       data.scores.dex.value
     );
-
     const hpmod = {
      0: -3,
      1: -3,
@@ -843,7 +833,6 @@ export class FggActor extends Actor {
       hpmod,
       data.scores.con.value
     );
-
     const systemshock = {
      0: 0,
      1: 25,
@@ -866,12 +855,10 @@ export class FggActor extends Actor {
      18: 99,
      25: 100,
     };
-
     data.scores.con.systemshock = FggActor._valueFromTable(
       systemshock,
       data.scores.con.value
     );
-
     const resurrectionchance = {
      0: 0,
      1: 30,
@@ -893,12 +880,10 @@ export class FggActor extends Actor {
      17: 98,
      18: 100,
     };
-
     data.scores.con.resurrectionchance = FggActor._valueFromTable(
       resurrectionchance,
       data.scores.con.value
     );
-
     const poisonresist = {
      0: -2,
      1: -2,
@@ -909,12 +894,10 @@ export class FggActor extends Actor {
      23: 3,
      25: 4,
     };
-
     data.scores.con.poisonresist = FggActor._valueFromTable(
       poisonresist,
       data.scores.con.value
     );
-
     const regeneration = {
      0: 0,
      20: 6,
@@ -924,19 +907,37 @@ export class FggActor extends Actor {
      24: 2,
      25: 1,
     };
-
     data.scores.con.regeneration = FggActor._valueFromTable(
       regeneration,
       data.scores.con.value
     );
-
     data.scores.con.mod = FggActor._valueFromTable(
       standard,
       data.scores.con.value
     );
+
+
     data.scores.int.mod = FggActor._valueFromTable(
       standard,
       data.scores.int.value
+    );
+
+        const mentaldefence = {
+     0: -6,
+     1: -6,
+     2: -4,
+     3: -3,
+     4: -2,
+     5: -1,
+     8: 0,
+     15: 1,
+     16: 2,
+     17: 3,
+     18: 4,
+    };
+    data.scores.wis.mentaldefence = FggActor._valueFromTable(
+      mentaldefence,
+      data.scores.wis.value
     );
     data.scores.wis.mod = FggActor._valueFromTable(
       standard,
