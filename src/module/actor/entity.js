@@ -915,14 +915,97 @@ export class FggActor extends Actor {
       standard,
       data.scores.con.value
     );
-
-
+    const languagesknown = {
+     0: 0,
+     2: 1,
+     9: 2,
+     12: 3,
+     14: 4,
+     16: 5,
+     17: 6,
+     18: 7,
+     19: 8,
+     20: 9,
+     21: 10,
+     22: 11,
+     23: 12,
+     24: 15,
+     25: 20,
+    };
+    data.scores.int.languagesknown = FggActor._valueFromTable(
+      languagesknown,
+      data.scores.int.value
+    );
+    const maxspelllevel = {
+     0: 0,
+     9: 4,
+     10: 5,
+     12: 6,
+     14: 7,
+     16: 8,
+     18: 9,
+    };
+    data.scores.int.maxspelllevel = FggActor._valueFromTable(
+      maxspelllevel,
+      data.scores.int.value
+    );
+    const maxnumber = {
+     0: 0,
+     9: 6,
+     10: 7,
+     13: 9,
+     15: 11,
+     17: 14,
+     18: 18,
+     19: 24,
+     20: 30,
+    };
+    const learnspell = {
+     0: 0,
+     9: 35,
+     10: 40,
+     11: 45,
+     12: 50,
+     13: 55,
+     14: 60,
+     15: 65,
+     16: 70,
+     17: 75,
+     18: 85,
+     19: 95,
+     20: 96,
+     21: 97,
+     22: 98,
+     23: 99,
+     24: 100,
+    };
+    data.scores.int.learnspell = FggActor._valueFromTable(
+      learnspell,
+      data.scores.int.value
+    );
+    const illusionimmunity = {
+     0: 0,
+     19: 1,
+     20: 2,
+     21: 3,
+     22: 4,
+     23: 5,
+     24: 6,
+     25: 7,
+    };
+    data.scores.int.illusionimmunity = FggActor._valueFromTable(
+      illusionimmunity,
+      data.scores.int.value
+    );
+    data.scores.int.maxnumber = FggActor._valueFromTable(
+      maxnumber,
+      data.scores.int.value
+    );
     data.scores.int.mod = FggActor._valueFromTable(
       standard,
       data.scores.int.value
     );
-
-        const mentaldefence = {
+    const mentaldefence = {
      0: -6,
      1: -6,
      2: -4,
