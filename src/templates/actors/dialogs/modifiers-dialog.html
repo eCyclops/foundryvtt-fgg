@@ -60,10 +60,19 @@
     <label>{{localize 'FGG.scores.int.long'}}</label>
     <ol>
       <li>
-        {{localize 'FGG.SpokenLanguages'}} ({{localize data.languages.spoken}})
+        {{localize 'FGG.LanguagesKnown'}} ({{data.languages.int.languagesknown}})
       </li>
       <li>
-        {{localize 'FGG.Literacy'}} ({{localize data.languages.literacy}})
+        {{localize 'FGG.MaxSpellLevel'}} ({{data.languages.int.maxspelllevel}})
+      </li>
+      <li>
+        {{localize 'FGG.MaxNumber'}} ({{data.languages.int.maxnumber}})
+      </li>
+      <li>
+        {{localize 'FGG.LearnSpell'}} ({{data.languages.int.learnspell}}%)
+      </li>
+      <li>
+        {{localize 'FGG.IllusionImmunity'}} ({{data.languages.int.illusionimmunity}} Level Illusions)
       </li>
     </ol>
   </div>
@@ -71,7 +80,7 @@
     <label>{{localize 'FGG.scores.wis.long'}}</label>
     <ol>
       <li>
-        {{localize 'FGG.saves.magic.long'}} ({{mod data.scores.wis.mod}})
+        {{localize 'FGG.saves.magic.long'}} ({{mod data.scores.wis.mentaldefence}})
       </li>
     </ol>
   </div>
