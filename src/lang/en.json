@@ -266,6 +266,9 @@
   "FGG.spells.Class": "Class",
   "FGG.spells.Duration": "Duration",
   "FGG.spells.Level": "Level",
+  "FGG.spells.School": "School/Sphere",
+  "FGG.spells.Components": "Components",
+  "FGG.spells.CastingTime": "Casting Time",
   "FGG.spells.Save": "Save",
   "FGG.spells.ResetSlots": "Reset Spell slots",
 
