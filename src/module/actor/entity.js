@@ -1086,12 +1086,85 @@ export class FggActor extends Actor {
       capped,
       data.scores.dex.value
     );
+
+    const reactionmod = {
+      0: -7,
+      2: -6,
+      3: -5,
+      4: -4,
+      5: -3,
+      6: -2,
+      7: -1,
+      8: 0,
+      13: 1,
+      14: 2,
+      15: 3,
+      16: 5,
+      17: 6,
+      18: 7,
+      19: 8,
+      20: 9,
+      21: 10,
+      22: 11,
+      23: 12,
+      24: 13,
+      25: 14,
+    }
     data.scores.cha.npc = FggActor._valueFromTable(
-      capped,
+      reactionmod,
+      data.scores.cha.value
+    );
+    const retainersmax = {
+      0: 0,
+      2: 1,
+      5: 2,
+      7: 3,
+      9: 4,
+      12: 5,
+      14: 6,
+      15: 7,
+      16: 8,
+      17: 10,
+      18: 15,
+      19: 20,
+      20: 25,
+      21: 30,
+      22: 35,
+      23: 40,
+      24: 45,
+      25: 50,
+    }
+    data.scores.cha.retainersmax = FggActor._valueFromTable(
+      retainersmax,
+      data.scores.cha.value
+    );
+    const loyaltymod = {
+      0: -8,
+      2: -7,
+      3: -6,
+      4: -5,
+      5: -4,
+      6: -3,
+      7: -2,
+      8: -1,
+      9: 0,
+      14: 1,
+      15: 3,
+      16: 4,
+      17: 6,
+      18: 8,
+      19: 10,
+      20: 12,
+      21: 14,
+      22: 16,
+      23: 18,
+      24: 20,
+    }
+    data.scores.cha.loyalty = FggActor._valueFromTable(
+      loyaltymod,
       data.scores.cha.value
     );
     data.scores.cha.retain = data.scores.cha.mod + 4;
-    data.scores.cha.loyalty = data.scores.cha.mod + 7;
 
     const od = {
       0: 0,
