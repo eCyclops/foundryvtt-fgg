@@ -30,3 +30,10 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Strength melee modifiers now use the correct attack and damage adjustments for FG&G (excluding fighter exceptional Strength)
 ### Removed
+
+## [0.0.26-0.0.32] - 2021-01-08
+### Added
+### Changed
+- Modifier dialogue now shows all the correct modifiers except Wis spell immunities
+### Removed
+- Languages from OSE which are not part of FG&G (e.g. alignment languages and some racial languages)
