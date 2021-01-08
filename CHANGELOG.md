@@ -37,3 +37,16 @@ All notable changes to this project will be documented in this file.
 - Modifier dialogue now shows all the correct modifiers except Wis spell immunities
 ### Removed
 - Languages from OSE which are not part of FG&G (e.g. alignment languages and some racial languages)
+
+## [0.0.33]
+### Added
+- Updated weapon items to include speed, damage type and large damage dice (not implemented in the roller yet)
+### Changed
+### Removed
+
+## [0.0.34]
+### Added
+- A new tab for NCS (to distinguish from class/race abilities)
+### Changed
+- fixed a bug stopping the sheet from opening
+### Removed
