@@ -984,14 +984,14 @@ export class FggActor extends Actor {
       data.scores.int.value
     );
     const illusionimmunity = {
-     0: 0,
-     19: 1,
-     20: 2,
-     21: 3,
-     22: 4,
-     23: 5,
-     24: 6,
-     25: 7,
+     0: "None",
+     19: "1st Levels Spells",
+     20: "2nd Level Spells",
+     21: "3rd Level Spells",
+     22: "4th Level Spells",
+     23: "5th Level Spells",
+     24: "6th Level Spells",
+     25: "7th Level Spells",
     };
     data.scores.int.illusionimmunity = FggActor._valueFromTable(
       illusionimmunity,
@@ -1026,6 +1026,17 @@ export class FggActor extends Actor {
      0: "0",
      13: "1x1st",
      14: "2x1st",
+     15: "2x1st, 1x2nd",
+     16: "2x1st, 2x2nd",
+     17: "2x1st, 2x2nd, 1x3rd",
+     18: "2x1st, 2x2nd, 1x3rd, 1x4th",
+     19: "3x1st, 2x2nd, 1x3rd, 2x4th",
+     20: "3x1st, 3x2nd, 1x3rd, 3x4th",
+     21: "3x1st, 3x2nd, 2x3rd, 3x4th, 1x5th",
+     22: "3x1st, 3x2nd, 2x3rd, 4x4th, 2x5th",
+     23: "3x1st, 3x2nd, 2x3rd, 4x4th, 4x5th",
+     24: "3x1st, 3x2nd, 2x3rd, 4x4th, 4x5th, 2x6th",
+     25: "3x1st, 3x2nd, 2x3rd, 4x4th, 4x5th, 3x6th, 1x7th",
     };
     data.scores.wis.bonusspells = FggActor._valueFromTable(
       bonusspells,
