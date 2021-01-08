@@ -206,8 +206,11 @@
     "spell": {
       "lvl": 1,
       "class": "Wizard",
+      "school": "",
+      "components": "",
       "duration": "",
       "range": "",
+      "castingtime": 1,
       "roll": "",
       "description": "",
       "memorized": 0,
