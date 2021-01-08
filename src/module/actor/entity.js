@@ -1023,9 +1023,9 @@ export class FggActor extends Actor {
       data.scores.wis.value
     );
     const bonusspells = {
-     0: 0,
-     13: 1/1,
-     14: 2/1,
+     0: "0",
+     13: "1x1st",
+     14: "2x1st",
     };
     data.scores.wis.bonusspells = FggActor._valueFromTable(
       bonusspells,
