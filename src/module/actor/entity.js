@@ -1022,6 +1022,36 @@ export class FggActor extends Actor {
       mentaldefence,
       data.scores.wis.value
     );
+    const bonusspells = {
+     0: 0,
+     13: 1/1,
+     14: 2/1,
+    };
+    data.scores.wis.bonusspells = FggActor._valueFromTable(
+      bonusspells,
+      data.scores.wis.value
+    );
+    const spellfailure = {
+     0: 100,
+     1: 80,
+     2: 60,
+     3: 50,
+     4: 45,
+     5: 40,
+     6: 35,
+     7: 30,
+     8: 25,
+     9: 20,
+     10: 15,
+     11: 10,
+     12: 5,
+     13: 0,
+    };
+    data.scores.wis.spellfailure = FggActor._valueFromTable(
+      spellfailure,
+      data.scores.wis.value
+    );
+
     data.scores.wis.mod = FggActor._valueFromTable(
       standard,
       data.scores.wis.value
