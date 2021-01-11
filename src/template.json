@@ -156,7 +156,7 @@
     }
   },
   "Item": {
-    "types": ["item", "weapon", "armor", "spell", "ability","noncombat"],
+    "types": ["item", "weapon", "armor", "spell", "ability"],
     "item": {
       "description": "",
       "quantity": {
@@ -226,15 +226,6 @@
       "blindroll": false,
       "description": "",
       "save": ""
-    }
-    "noncombat": {
-      "pattern": "white",
-      "requirements": "",
-      "roll": "",
-      "rollType": "result",
-      "rollTarget": 0,
-      "blindroll": false,
-      "description": ""
     }
   }
 }
