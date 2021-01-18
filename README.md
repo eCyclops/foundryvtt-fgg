@@ -26,8 +26,8 @@ The framework for this system is based on the Old-School Essentials system by U-
 - ~~'Magic-User' default class for spells~~
 
 ## To-Do List
-- Add the appropriate modifiers for all the attributes (currently using OSE modifiers)
-- Try to work out a way to add size category damage (S/M L)
+- Add the appropriate modifiers for all the attributes (partly implemented)
+- Try to work out a way to add size category damage (S/M L) - partly implemented but not included in rolls
 - ~~Validate monster saves as per FGG~~
 - Modify preset abilities (open doors, bend bars etc. to FGG)
 - Modify armour categories to FGG
