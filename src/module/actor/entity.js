@@ -543,11 +543,11 @@ export class FggActor extends Actor {
     if (["detailed", "complete"].includes(option)) {
       if (weight > data.encumbrance.max) {
         data.movement.base = 0;
-      } else if (weight > 800 + delta) {
+      } else if (weight > data.encumbrance.max - 450) {
         data.movement.base = 30;
-      } else if (weight > 600 + delta) {
+      } else if (weight > data.encumbrance.max - 800) {
         data.movement.base = 60;
-      } else if (weight > 400 + delta) {
+      } else if (weight > data.encumbrance.max - 1150) {
         data.movement.base = 90;
       } else {
         data.movement.base = 120;
