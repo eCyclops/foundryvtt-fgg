@@ -50,3 +50,11 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - fixed a bug stopping the sheet from opening
 ### Removed
+
+## [0.0.35-36]
+### Added
+### Changed
+- altered encumbrance, it's still not perfect but closer to the expected result (currently aligns to 1e)
+- fixed AC max and minimums as was set between -3 to 9, now -10 to 10 in line with FGG
+### Removed
+- removed NCS tab as could not get this functionality to work at this time
