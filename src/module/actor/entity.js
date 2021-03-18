@@ -17,14 +17,8 @@ export class FggActor extends Actor {
     this.computeTreasure();
 
     // Determine Initiative
-    if (game.settings.get("fgg", "initiative") != "group") {
-      data.initiative.value = data.initiative.mod;
-      if (this.data.type == "character") {
-        data.initiative.value += data.scores.dex.mod;
-      }
-    } else {
-      data.initiative.value = 0;
-    }
+    data.initiative.value = 0;
+    
     data.movement.encounter = data.movement.base / 3;
   }
   /* -------------------------------------------- */
