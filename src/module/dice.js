@@ -159,7 +159,7 @@ export class FggDice {
         return result;
       }
       result.isSuccess = true;
-      let value = Math.clamped(result.target - roll.total, -10, 10);
+      let value = Math.clamped(result.target - roll.total, -20, 10);
       result.details = game.i18n.format("FGG.messages.AttackSuccess", {
         result: value,
         bonus: result.target,
