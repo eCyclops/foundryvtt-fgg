@@ -58,3 +58,10 @@ All notable changes to this project will be documented in this file.
 - fixed AC max and minimums as was set between -3 to 9, now -10 to 10 in line with FGG
 ### Removed
 - removed NCS tab as could not get this functionality to work at this time
+
+## [0.0.37]
+### Added
+### Changed
+- changed morale to a 2d10 roll in line with FGG
+- altered AC max and minimums, now -20 to 10 to allow more cross compatibility
+### Removed
