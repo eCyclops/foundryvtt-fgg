@@ -144,7 +144,7 @@ export class FggActor extends Actor {
   }
 
   rollMorale(options = {}) {
-    const rollParts = ["2d6"];
+    const rollParts = ["2d10"];
 
     const data = {
       actor: this.data,
