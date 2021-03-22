@@ -17,6 +17,7 @@ export class FggItem extends Item {
       case "spell":
         img = "/systems/fgg/assets/default/spell.png";
         break;
+      case "noncombat":
       case "ability":
         img = "/systems/fgg/assets/default/ability.png";
         break;
@@ -191,6 +192,7 @@ export class FggItem extends Item {
         }
         return sTags;
       case "ability":
+      case "noncombat":
         let roll = "";
         roll += data.roll ? data.roll : "";
         roll += data.rollTarget ? CONFIG.FGG.roll_type[data.rollType] : "";
@@ -259,6 +261,7 @@ export class FggItem extends Item {
         this.spendSpell();
         break;
       case "ability":
+      case "noncombat":
         if (this.data.data.roll) {
           this.rollFormula();
         } else {

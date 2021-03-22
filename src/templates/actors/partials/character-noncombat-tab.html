@@ -1,15 +1,15 @@
-<div class="inventory abilities">
+<div class="inventory noncombats">
   <div class="item-titles flexrow">
     <div class="item-name">{{localize 'FGG.category.noncombat'}}</div>
     <div class="item-controls">
       {{#if owner}}
-      <a class="item-control item-create" title='{{localize "FGG.Add"}}' data-type="ability"><i
+      <a class="item-control item-create" title='{{localize "FGG.Add"}}' data-type="noncombat"><i
           class="fas fa-plus"></i></a>
       {{/if}}
     </div>
   </div>
   <ol class="item-list resizable" data-base-size="260">
-    {{#each abilities as |item|}}
+    {{#each noncombats as |item|}}
     <li class="item-entry">
       <div class="item flexrow" data-item-id="{{item._id}}">
         <div class="item-name {{#if item.data.roll}}item-rollable{{/if}} flexrow">

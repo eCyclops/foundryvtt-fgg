@@ -35,7 +35,7 @@ export class FggActorSheet extends ActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, abilities, spells] = data.items.reduce(
+    let [items, weapons, armors, abilities, spells, noncombats] = data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
@@ -43,9 +43,10 @@ export class FggActorSheet extends ActorSheet {
         else if (item.type === "armor") arr[2].push(item);
         else if (item.type === "ability") arr[3].push(item);
         else if (item.type === "spell") arr[4].push(item);
+        else if (item.type === "noncombat") arr[5].push(item);
         return arr;
       },
-      [[], [], [], [], []]
+      [[], [], [], [], [], []]
     );
 
     // Sort spells by level
@@ -69,6 +70,7 @@ export class FggActorSheet extends ActorSheet {
     };
     data.abilities = abilities;
     data.spells = sortedSpells;
+    data.noncombats = noncombats;
   }
 
   _onItemSummary(event) {
